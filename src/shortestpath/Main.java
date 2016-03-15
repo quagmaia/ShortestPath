@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //A: convert input to biheap <START TIMER>
+        //A: convert input to graph/heap
         
         //B: dijkstras 
         

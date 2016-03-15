@@ -50,7 +50,7 @@ public class BiHeap {
        }//while
    }//up
    
-   public int delete(){
+   public int deleteMin(){
        //output deleted node
        int output = array[0];
        //set last node to index 0
