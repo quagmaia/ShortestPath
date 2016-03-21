@@ -9,9 +9,7 @@ public class Node {
     String name;
     Boolean visited;
     
-    public Node(String name){
-        name=this.name;
-    }
+    public Node(){}
 
     public String getName() {
         return name;

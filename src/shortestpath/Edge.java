@@ -17,7 +17,7 @@ public class Edge {
     public Edge(Node source, Node destination, int weight){
         a=source;
         b=destination;
-        weight=this.weight;
+        this.weight=weight;
     }
 
     public int getWeight() {
@@ -42,11 +42,6 @@ public class Edge {
 
     public void setDestination(Node b) {
         this.b = b;
-    }
-    
-    @Override
-    public String toString(){
-        return a + ", " + b;
     }
     
     

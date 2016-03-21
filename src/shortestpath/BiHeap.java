@@ -7,14 +7,14 @@ package shortestpath;
 
 //this is a MIN HEAP
 public class BiHeap {
-    int array[];
+    Edge array[];
     int nextSeat;
     
     //NOTE: node @ index k has children at indexes 2k+1 and 2k+2
     //parent node p =(k-1)/2
     
    public BiHeap(int x){
-       array = new int[x];
+       array = new Edge[x];
        nextSeat = 0;
    }//constructor
    
@@ -26,7 +26,7 @@ public class BiHeap {
         return nextSeat==array.length;
    }
    
-   public void insert(int x){
+   public void insert(Edge x){
        //go to first empty spot of array and insert
        array[nextSeat]=x;
        //sift upwards
@@ -35,12 +35,28 @@ public class BiHeap {
        nextSeat++;
    }//insert
    
+   public int getWeight(int x){
+       return array[x].weight;
+   }
+   
+   public String getMinSD(int x){
+       return array[x].getSource().name + " " + array[x].getDestination().name;
+   }
+   
+   public String PrintWeights(){
+       String a = "";
+       for (int i = 0; i < array.length; i++){
+           a += array[i].weight + ", ";
+       }
+       return a;
+   }
+   
    private void up(int k){
        while (k > 0){
            int p = (k-1)/2;
-           if (array[k] < array[p]){
+           if (array[k].weight < array[p].weight){
                //swap k and p
-               int temp = array[k];
+               Edge temp = array[k];
                array[k] = array[p];
                array[p] = temp;
                k=p;
@@ -52,7 +68,7 @@ public class BiHeap {
    
    public int deleteMin(){
        //output deleted node
-       int output = array[0];
+       int output = array[0].weight;
        //set last node to index 0
        array[0] = array[nextSeat-1];
        //sift down
@@ -69,12 +85,12 @@ public class BiHeap {
            int max=left;
            int right=left+1;
            if (right < nextSeat){   //if there's a right child
-               if (array[right] < array[left]){
+               if (array[right].weight < array[left].weight){
                    max++;
                }//if
            }//if
-           if (array[k] < array[max]){
-               int temp = array[k];
+           if (array[k].weight < array[max].weight){
+               Edge temp = array[k];
                array[k] = array[max];
                array[max] = temp;
                k=max;
