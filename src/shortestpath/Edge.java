@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package shortestpath;
 
 /**
@@ -11,13 +10,14 @@ package shortestpath;
  * @author Maia
  */
 public class Edge {
+
     int weight;
-    Node a, b;
-    
-    public Edge(Node source, Node destination, int weight){
-        a=source;
-        b=destination;
-        this.weight=weight;
+    String a, b;
+
+    public Edge(String source, String destination, int weight) {
+        a = source;
+        b = destination;
+        this.weight = weight;
     }
 
     public int getWeight() {
@@ -28,21 +28,25 @@ public class Edge {
         this.weight = weight;
     }
 
-    public Node getSource() {
+    public String getSource() {
         return a;
     }
 
-    public void setSource(Node a) {
+    public void setSource(String a) {
         this.a = a;
     }
 
-    public Node getDestination() {
+    public String getDestination() {
         return b;
     }
 
-    public void setDestination(Node b) {
+    public void setDestination(String b) {
         this.b = b;
     }
     
-    
+    @Override
+    public String toString(){
+        return "Source: " + a + " Dest: " + b + " Weight: " + weight;
+    }
+
 }

@@ -9,7 +9,9 @@ public class Node {
     String name;
     Boolean visited;
     
-    public Node(){}
+    public Node(String n){
+        name = n;
+    }
 
     public String getName() {
         return name;

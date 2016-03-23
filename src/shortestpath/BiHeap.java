@@ -40,7 +40,7 @@ public class BiHeap {
    }
    
    public String getMinSD(int x){
-       return array[x].getSource().name + " " + array[x].getDestination().name;
+       return array[x].getSource() + " " + array[x].getDestination();
    }
    
    public String PrintWeights(){
@@ -82,18 +82,18 @@ public class BiHeap {
        int k = 0;
        int left = 2*k+1;
        while (left < nextSeat){
-           int max=left;
+           int min=left;
            int right=left+1;
            if (right < nextSeat){   //if there's a right child
                if (array[right].weight < array[left].weight){
-                   max++;
+                   min=right;
                }//if
            }//if
-           if (array[k].weight < array[max].weight){
+           if (array[k].weight > array[min].weight){
                Edge temp = array[k];
-               array[k] = array[max];
-               array[max] = temp;
-               k=max;
+               array[k] = array[min];
+               array[min] = temp;
+               k=min;
                left=2*k+1;
            }else{
                break;
