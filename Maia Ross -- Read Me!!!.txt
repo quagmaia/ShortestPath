@@ -1,0 +1,17 @@
+Maia Ross
+
+I know my project has some problems; it's too slow to check 25000.txt, and with 1000.txt its answer is too small. When I ran through my program with some of my own personal tests that were much smaller, things worked perfectly. I don't know if there is a problem with the logic of my code that makes bugger inputs wrong, or if I somehow misinterpreted what the assignment is. 
+
+As for making my program more efficient, I am not sure what to try. 
+
+I would say my problem is about 80% complete. Maybe less if my design was so terrible that to fix it, I would have to redesign form the bottom up--hopefully that's not the case! :)
+
+Credit for help I received:
+
+Rex Petersen (he helped me with some design and organization questions)
+
+Wikipedia (specifically binary heaps and Dijkstra's)
+
+https://www.cs.cmu.edu/~adamchik/15-121/lectures/Binary%20Heaps/heaps.html
+
+A few StackExchange posts for more specific questions; unfortunately can't remember them now.
