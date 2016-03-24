@@ -40,7 +40,7 @@ public class Input {
                 line = line.replaceAll("[^0-9]+", " ");
                 String[] temp = line.split(" ");
                 numNodes = Integer.parseInt(temp[1]);
-                numEdges = 2*Integer.parseInt(temp[2]);
+                numEdges = Integer.parseInt(temp[2]);
             }
         }//while
     }//readSize()
@@ -61,9 +61,9 @@ public class Input {
                     Edge e = new Edge(source, dest, weight);
                     edges[edCount] = e;
                     edCount++;
-                    Edge ee = new Edge(dest, source, weight);
-                    edges[edCount] = ee;
-                    edCount++;
+                    //Edge ee = new Edge(dest, source, weight);
+                    //edges[edCount] = ee;
+                    //edCount++;
                 }
             }//if !line.contains...
         }//while
